@@ -1,0 +1,35 @@
+public class ucbasamak {
+    public static void main(String[] args) {
+
+
+        for (int i = 1; i < 10000; i++) {
+
+            int temp = i;
+            int basSay = 0;
+            int sonuc = 0;
+            int basamak;
+
+            while (temp != 0){
+
+                temp/=10;
+                basSay++;
+            }
+
+            temp=i;
+
+            while (temp !=0){
+
+                basamak=temp %10 ;
+                int hesap = 1 ;
+                for (int k =1 ; k<=basSay;k++){
+                    hesap = hesap*basamak;
+
+                }sonuc += hesap;
+                temp /=10;
+            }
+            if (sonuc == i) {
+                System.out.println( i + "armstrong sayisidir ");
+            }
+        }
+    }
+}
